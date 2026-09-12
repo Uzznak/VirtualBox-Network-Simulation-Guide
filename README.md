@@ -13,6 +13,7 @@ Afin de simuler le domaine de diffusion d'un LAN sans surcharger les ressources 
 | :--- | :--- | :--- | :--- | :--- |
 | **PC1** | 1024 Mo | 1 vCPU | 10 Go | Station cliente 1 (Émetteur / Analyseur `tcpdump`) | 
 | **PC2** | 1024 Mo | 1 vCPU | 10 Go | Station cliente 2 (Cible / Générateur de trafic) |  
+
   
 ### Étapes d'installation des VM
 1.installer virtualbox () et telecharger une ISO à (https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/)  
