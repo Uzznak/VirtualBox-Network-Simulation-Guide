@@ -22,8 +22,8 @@ Afin de simuler le domaine de diffusion d'un LAN sans surcharger les ressources 
 2. Création de la VM principale `PC1` sous Debian 12 (Netinst)  
 3. Allocation des ressources : 1 vCPU, 1024 Mo de RAM, 10 Go de disque virtuel dynamiquement alloué  
 
-## Configuration de l'Interconnexion Réseau (VirtualBox)
-### configurer le réseau
+### Configuration de l'Interconnexion Réseau (VirtualBox)
+#### configurer le réseau
 Le but est de simuler le comportement d'un **Hub Ethernet (Layer 1)**.
 Le commutateur virtuel de VirtualBox est configuré pour transmettre la totalité du trafic unicast et broadcast à l'ensemble des nœuds raccordés.
 
