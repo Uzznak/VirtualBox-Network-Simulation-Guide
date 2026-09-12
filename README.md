@@ -22,17 +22,17 @@ Afin de simuler le domaine de diffusion d'un LAN sans surcharger les ressources 
 2. Création de la VM principale `PC1` sous Debian 12 (Netinst)  
 3. Allocation des ressources : 1 vCPU, 1024 Mo de RAM, 10 Go de disque virtuel dynamiquement alloué  
 
-### Configuration de l'Interconnexion Réseau (VirtualBox)
+### Configuration de l'Interconnexion Réseau
 #### configurer le réseau
-Le but est de simuler le comportement d'un **Hub Ethernet (Layer 1)**.
+Le but est de simuler le comportement d'un **Hub Ethernet (Layer 1)** sur VirtualBox
 Le commutateur virtuel de VirtualBox est configuré pour transmettre la totalité du trafic unicast et broadcast à l'ensemble des nœuds raccordés.
 
 #### Etapes 
-1. **Réseau Interne Partagé :**  
-(ne pas démarrer PC1) :Faire un clic droit sur PC1 > Configuration  
-Va dans l'onglet Réseau (Network) :  
-   * **Mode d'accès reseau :** sélectionner Réseau interne (Internal Network, créer LAN_HUB (nom du réseau virtuel partagé)  
-   * **Mode promiscuité :** `Déroule la section Avancé :M Choisis Autoriser tout (Allow All) (Permet la capture de toutes les trames circulantes via `tcpdump` / Wireshark)  
+1. **Réseau Interne Partagé :**
+
+PC 1 clic droit > Settings > > Network > > >  **Mode d'accès reseau :** sélectionner Réseau interne (Internal Network)  
+> > > nommer LAN_HUB (nom du réseau virtuel partagé)  
+> > >  **Mode promiscuité :** `Déroule la section Avancé :M Choisis Autoriser tout (Allow All) (Permet la capture de toutes les trames circulantes via `tcpdump` / Wireshark)  
 valider et fermer
 
 
