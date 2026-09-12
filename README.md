@@ -37,10 +37,10 @@ PC 1 clic droit > Settings > > Network > > >  **Mode d'accès reseau :** sélect
 valider et fermer
 
 
-4. Clonage de la VM pour générer rapidement les nœuds secondaires (`PC2`), en régénérant les adresses MAC pour éviter tout conflit de niveau 2  
 
-### Dédoublement des nœuds
+### Clonage de la VM 
    * Génération de `PC2` par clonage de la machine matrice `PC1`.
+   * Clonage de la VM pour générer rapidement les nœuds secondaires (`PC2`), en régénérant les adresses MAC pour éviter tout conflit de niveau 2  
    * Réinitialisation des adresses MAC physiques virtuellement attribuées aux interfaces réseau afin de garantir l'unicité des tables ARP[cite: 1].
 
 Étape 2 : Cloner PC1 pour créer PC2
