@@ -28,7 +28,8 @@ Le but est de simuler le comportement d'un **Hub Ethernet (Layer 1)** sur Virtua
 Le commutateur virtuel de VirtualBox est configuré pour transmettre la totalité du trafic unicast et broadcast à l'ensemble des nœuds raccordés.
 
 #### Etapes 
-1. **Réseau Interne Partagé :**
+
+**Réseau Interne Partagé :**
 
 PC 1 clic droit > Settings > > Network > > >  **Mode d'accès reseau :** sélectionner Réseau interne (Internal Network)  
 > > > nommer LAN_HUB (nom du réseau virtuel partagé)  
@@ -38,6 +39,20 @@ valider et fermer
 
 4. Clonage de la VM pour générer rapidement les nœuds secondaires (`PC2`), en régénérant les adresses MAC pour éviter tout conflit de niveau 2  
 
-3. **Dédoublement des nœuds :**
+### Dédoublement des nœuds
    * Génération de `PC2` par clonage de la machine matrice `PC1`.
    * Réinitialisation des adresses MAC physiques virtuellement attribuées aux interfaces réseau afin de garantir l'unicité des tables ARP[cite: 1].
+
+Étape 2 : Cloner PC1 pour créer PC2
+
+Pour avoir un deuxième PC sur le réseau sans refaire l'installation :
+
+    Fais un clic droit sur PC1 > Cloner... (Clone).
+
+    Nom : Nomme la nouvelle VM PC2.
+
+    Politique d'adresse MAC : Sélectionne Générer de nouvelles adresses MAC pour toutes les cartes réseau (impératif pour éviter les conflits d'IP/MAC).
+
+    Type de clone : Choisis Clone lié (Linked clone, très rapide) ou Clone complet.
+
+    Clique sur Terminer.
