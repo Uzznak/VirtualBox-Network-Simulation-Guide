@@ -6,7 +6,7 @@
 * **Système d'exploitation hôte :** Ubuntu 24.04 LTS
 * **Distribution des nœuds virtuels :** Debian 12 (Bookworm) 64-bit
 
-### Architecture de la Topologie Réseau
+### Architecture de la Topologie Réseau  
 Afin de simuler le domaine de diffusion d'un LAN sans surcharger les ressources système, la topologie est modélisée à l'aide de machines virtuelles interconnectées sur un réseau interne virtuel  configuré en mode promiscuité.
 
 | Nœud | RAM | CPU | Disque | Rôle / Description |
