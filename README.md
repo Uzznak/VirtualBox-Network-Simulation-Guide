@@ -2,9 +2,9 @@
 ##  Configuration du Lab de Simulation
 
 ### Environnement
-* **Hyperviseur :** Oracle VirtualBox 7.x
-* **Système d'exploitation hôte :** Ubuntu 24.04 LTS
-* **Distribution des nœuds virtuels :** Debian 12 (Bookworm) 64-bit
+* Hyperviseur : Oracle VirtualBox 7.x
+* Système d'exploitation hôte : Ubuntu 24.04 LTS
+* Distribution des nœuds virtuels : Debian 12 (Bookworm) 64-bit
 
 ### Architecture de la Topologie Réseau  
 Afin de simuler le domaine de diffusion d'un LAN sans surcharger les ressources système, la topologie est modélisée à l'aide de machines virtuelles interconnectées sur un réseau interne virtuel  configuré en mode promiscuité.
@@ -15,8 +15,8 @@ Afin de simuler le domaine de diffusion d'un LAN sans surcharger les ressources 
 | **PC2** | 1024 Mo | 1 vCPU | 10 Go | Station cliente 2 (Cible / Générateur de trafic) |  
 
   
-### Étapes d'installation des VM
-### Créer la première machine virtuelle
+### Installation des VM
+#### Créer la première machine virtuelle
 
 1.installer virtualbox () et telecharger une ISO à (https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/)  
 2. Création de la VM principale `PC1` sous Debian 12 (Netinst)  
