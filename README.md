@@ -25,9 +25,11 @@ Afin de simuler le domaine de diffusion d'un LAN sans surcharger les ressources 
 ## configurer le réseau
 Le but est de simuler l'accès au hub :
 
-
-4. Clonage de la VM pour générer rapidement les nœuds secondaires (`PC2`), en régénérant les adresses MAC pour éviter tout conflit de niveau 2  
 (ne pas démarrer PC1) :Faire un clic droit sur PC1 > Configuration  
 Va dans l'onglet Réseau (Network) :Mode d'accès réseau : Sélectionne Réseau interne (Internal Network, créer LAN_HUB (nom du réseau virtuel partagé)
 Déroule la section Avancé :Mode promiscuité : Choisis Autoriser tout (Allow All)  
 valider et fermer
+
+
+
+4. Clonage de la VM pour générer rapidement les nœuds secondaires (`PC2`), en régénérant les adresses MAC pour éviter tout conflit de niveau 2  
