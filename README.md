@@ -56,3 +56,27 @@ Pour avoir un deuxième PC sur le réseau sans refaire l'installation :
     Type de clone : Choisis Clone lié (Linked clone, très rapide) ou Clone complet.
 
     Clique sur Terminer.
+
+
+### Récupération de Machine Virtuelle via Disque VDI / Descripteur VBOX
+
+En cas de perte d'enregistrement de l'instance dans VirtualBox, deux méthodes de restauration sont applicables sans perte de données :
+
+1. **Restauration native par fichier de définition (.vbox) :**
+   * Action : `Machine` $\rightarrow$ `Ajouter...` $\rightarrow$ Sélection de `PC1.vbox`.
+2. **Restauration par réassociation du volume disque (.vdi) :**
+   * En cas d'altération du fichier XML de définition, création d'une nouvelle VM en raccordant le volume virtuel existant (`PC1-TD1.vdi`) comme disque système principal.
+  
+
+
+ #### Dépannage : Conflit d'UUID (`NS_ERROR_FAILURE 0x80004005`)
+
+Lorsqu'une machine virtuelle est déjà enregistrée dans la base du démon VirtualBox mais absente du panneau d'affichage GUI, la tentative d'ajout du fichier `.vbox` génère un conflit d'identifiant unique (UUID).
+
+**Résolution via la CLI VirtualBox :**
+```bash
+# Libération de l'identifiant UUID en cache
+VBoxManage unregistervm PC1
+
+# Réintégration propre de la VM dans le registre
+VBoxManage registervm "$HOME/VirtualBox VMs/PC1/PC1.vbox"
